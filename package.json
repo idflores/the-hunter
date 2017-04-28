@@ -1,0 +1,22 @@
+{
+  "name": "the-hunter",
+  "version": "1.0.0",
+  "description": "My own personal Twitch.tv Bot that I let my friends use too",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idflores/the-hunter.git"
+  },
+  "author": "Israel Flores",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/idflores/the-hunter/issues"
+  },
+  "homepage": "https://github.com/idflores/the-hunter#readme",
+  "dependencies": {
+    "irc-js": "^2.0.0-beta.5"
+  }
+}
