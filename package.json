@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/idflores/the-hunter#readme",
   "dependencies": {
-    "irc-js": "^2.0.0-beta.5"
+    "irc": "^0.5.2"
   }
 }
