@@ -3,13 +3,14 @@
 *               https://github.com/idflores
 *
 * Script Name:  bot.js
-* Purpose:      defines functionality of the bot
+* Purpose:      this is where the bot lives :)
 *
 * License:      GPL v3.0
 */
 
 var irc = require("irc");
 var bot_config = require("./config.js");
+var commands = require("./commands.js");
 
 // the bot
 var TheHunter;
@@ -23,30 +24,8 @@ TheHunter = new irc.Client(bot_config.server, bot_config.username,
   }
 );
 
-// METHODS
-function OnMessage(from, channel, text, message)
-{
-  console.log(from, channel, text);
-  if (text == "!greeting")
-  {
-    TheHunter.send("PRIVMSG", channel, "Hello " + from + "! You have triggered my command!");
-  }
-}
-
-function OnJoin(channel, nick, msgobj)
-{
-  console.log("Bot has joined channel", channel);
-  console.log("nick", nick);
-  console.log("msgobj", msgobj);
-}
-
-function OnError(message)
-{
-    console.log("IRC Error:", message);
-}
-
-// "main"
-TheHunter.addListener("message", OnMessage);
-TheHunter.addListener("action", OnMessage);
-TheHunter.addListener("join", OnJoin);
-TheHunter.addListener("error", OnError);
+// Listeners
+TheHunter.addListener("message", commands.OnMessage);
+TheHunter.addListener("action", commands.OnMessage);
+TheHunter.addListener("join", commands.OnJoin);
+TheHunter.addListener("error", commands.OnError);
