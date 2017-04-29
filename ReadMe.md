@@ -13,6 +13,7 @@ If I do give you permission, all I ask is that you give me credit. Don't be a je
 ![](ReadMe_assets/redirect-uri.png)
 
 **Installing the IRC npm Package**
+
 [Node IRC Installation](https://github.com/martynsmith/node-irc)
 
 [Node IRC Documentation](https://node-irc.readthedocs.io/en/latest/)
