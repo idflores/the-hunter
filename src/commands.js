@@ -19,10 +19,26 @@ exports.OnMessage = function(from, channel, text, message)
 
   /*-- Everyone commands --*/
 
-  // Debug greeting
+  // Debug command
   if (eval_text[0] == "!touch")
   {
     this.send("PRIVMSG", channel, "Hey @" + from + ", that tickles!");
+  }
+
+  // Creator command
+  if (text == "@TheHunter_bot who is your creator?"
+      || text == "@theHunter_bot who is your creator?"
+      || text == "@Thehunter_bot who is your creator?"
+      || text == "@thehunter_bot who is your creator?")
+  {
+    // Debug identity
+    if (from == users.developer)
+    {
+      this.send("PRIVMSG", channel, "@" + from + ", you are my creator!");
+    }
+    else {
+      this.send("PRIVMSG", channel, "Who are you? DansGame");
+    }
   }
 
 
@@ -80,14 +96,6 @@ exports.OnMessage = function(from, channel, text, message)
 
     /*-- Developer ONLY commands --*/
 
-    if (from == users.developer)
-    {
-      // Debug identity
-      if (text == "@TheHunter_bot, who is your creator?")
-      {
-        this.send("PRIVMSG", channel, "@" + from + ", you are my creator!");
-      }
-    }
   }
 }
 
