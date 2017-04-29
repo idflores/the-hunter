@@ -22,7 +22,7 @@ exports.OnMessage = function(from, channel, text, message)
   // Debug greeting
   if (eval_text[0] == "!touch")
   {
-    this.send("PRIVMSG", channel, "Hey " + from + ", that tickles!");
+    this.send("PRIVMSG", channel, "Hey @" + from + ", that tickles!");
   }
 
 
@@ -85,7 +85,7 @@ exports.OnMessage = function(from, channel, text, message)
       // Debug identity
       if (text == "@TheHunter_bot, who is your creator?")
       {
-        this.send("PRIVMSG", channel, from + ", you are my creator!");
+        this.send("PRIVMSG", channel, "@" + from + ", you are my creator!");
       }
     }
   }
@@ -94,8 +94,8 @@ exports.OnMessage = function(from, channel, text, message)
 exports.OnJoin = function(channel, nick, msgobj)
 {
   console.log("Bot has joined channel", channel);
-  console.log("nick", nick);
-  console.log("msgobj", msgobj);
+  //console.log("nick", nick);
+  //console.log("msgobj", msgobj);
 }
 
 exports.OnError = function(message)
