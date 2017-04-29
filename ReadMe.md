@@ -21,6 +21,7 @@ If I do give you permission, all I ask is that you give me credit. Don't be a je
 [Node IRC Documentation](https://node-irc.readthedocs.io/en/latest/)
 
 [Build Errors with the Node ICU Character Set Detection Dependency](https://github.com/martynsmith/node-irc/issues/308)
+
 In short.... you don't need the dependency. Just ignore the error.
 
 **How to Call Methods from Other JavaScript Files**
