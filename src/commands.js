@@ -26,10 +26,13 @@ exports.OnMessage = function(from, channel, text, message)
   }
 
   // Creator command
-  if (text == "@TheHunter_bot who is your creator?"
-      || text == "@theHunter_bot who is your creator?"
-      || text == "@Thehunter_bot who is your creator?"
-      || text == "@thehunter_bot who is your creator?")
+  // easter egg ;)
+  //
+  // These webistes proved exceptional for reference of RegExp.text()
+  // http://stackoverflow.com/questions/23018488/string-match-with-wildcard-of-unknown-length
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
+  //
+  if (/TheHunter_bot.*? who is your creator?/i.test(text))
   {
     // Debug identity
     if (from == users.developer)
